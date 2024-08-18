@@ -11,12 +11,13 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/pwa-repro",
             "index": "src/index.html",
-            "browser": "src/main.ts",
-            "serviceWorker": "ngsw-config.json",
+            "main": "src/main.ts",
+            "ngswConfigPath": "ngsw-config.json",
+            "serviceWorker": true,
             "polyfills": [
               "zone.js"
             ],
